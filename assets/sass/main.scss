@@ -1,0 +1,123 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+
+// Variables
+$dark_grey: #1f1f1f;
+$light_grey: #d6d5c9;
+$azure: #35a7ff;
+$vermillion: #f44336;
+$raisin: #212025;
+$image: '/assets/img/pagoda_fondo.jpg';
+// Mixins
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container{
+  height: 100vh;
+  background: center url(../img/pagoda_fondo.jpg);
+
+  &__center {
+    @include center();
+    height: 25%;
+    width: 50%;
+    box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.75);
+  }
+
+  &__bg {
+    height: 100%;
+    background: center url($image);
+    filter: blur(3px);
+  }
+
+  &__box {
+    @include center();
+    color: $dark_grey;
+    z-index: 1;
+  }
+}
+
+.container__center{ 
+  overflow: inherit;
+  max-width: 50rem;
+}
+.container__box{ 
+  color: rgb(43, 42, 42);
+}
+
+.container__bg{ 
+  filter: blur(2px);
+}
+
+#current {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  border-bottom: 1px solid rgb(43, 42, 42);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+
+  &__date {
+    margin: auto 0;
+    font-size: 1.2em;
+  }
+
+  &__day {
+    grid-row: 1/2;
+    font-size: 1.2em;
+    margin: auto 0;
+  }
+
+  &__month {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    font-size: 2.4em;
+    margin: auto 0;
+  }
+
+  &__year {
+    margin: auto 0;
+    font-size: 1.4em;
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+}
+
+#time {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+
+  &__text {
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  &__hour,
+  &__min,
+  &__sec {
+    display: block;
+    text-align: center;
+    height: 54px;
+    font-size: 3em;
+  }
+
+  &__colon {
+    font-size: 2em;
+    margin-top: 25px;
+  }
+}
+

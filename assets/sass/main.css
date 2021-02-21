@@ -1,0 +1,131 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  background: center url(../img/pagoda_fondo.jpg);
+}
+
+.container__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 25%;
+  width: 50%;
+  -webkit-box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.75);
+          box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.75);
+}
+
+.container__bg {
+  height: 100%;
+  background: center url("/assets/img/pagoda_fondo.jpg");
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+.container__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #1f1f1f;
+  z-index: 1;
+}
+
+.container__center {
+  overflow: inherit;
+  max-width: 50rem;
+}
+
+.container__box {
+  color: #2b2a2a;
+}
+
+.container__bg {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+#current {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  border-bottom: 1px solid #2b2a2a;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+#current__date {
+  margin: auto 0;
+  font-size: 1.2em;
+}
+
+#current__day {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  font-size: 1.2em;
+  margin: auto 0;
+}
+
+#current__month {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  font-size: 2.4em;
+  margin: auto 0;
+}
+
+#current__year {
+  margin: auto 0;
+  font-size: 1.4em;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+#time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+#time__text {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#time__hour, #time__min, #time__sec {
+  display: block;
+  text-align: center;
+  height: 54px;
+  font-size: 3em;
+}
+
+#time__colon {
+  font-size: 2em;
+  margin-top: 25px;
+}
+/*# sourceMappingURL=main.css.map */
